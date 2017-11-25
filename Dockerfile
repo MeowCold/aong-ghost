@@ -15,7 +15,7 @@ ENV GHOST_CONTENT /ghost/content
 COPY ./ /ghost/
 WORKDIR $GHOST_SOURCE
 
-RUN npm install -g knex-migrator
+RUN npm install -g knex-migrator --registry=https://registry.npm.taobao.org
 RUN npm install "ghost@$GHOST_VERSION" --save
 RUN npm install sqlite3 --save
 
